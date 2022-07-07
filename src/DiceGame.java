@@ -1,4 +1,4 @@
-public class Poker {
+public class DiceGame {
     private int balance = 20;
 
     @Override
