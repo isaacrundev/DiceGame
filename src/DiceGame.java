@@ -4,6 +4,14 @@ public class DiceGame {
     private int balance = 1000;
     private boolean memberShip = false;
 
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public void setMemberShip(boolean memberShip) {
+        this.memberShip = memberShip;
+    }
+
     @Override
     public String toString() {
         return "Your Balance: $" + balance;
@@ -77,7 +85,7 @@ public class DiceGame {
     void Ads() throws InterruptedException {
         if (memberShip == false) {
             clrscr();
-            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("=Pay $500 to get ad-free membership TODAY!=");
             System.out.println("===========================================");
             System.out.println("===========================================");
             System.out.println("===========================================");
@@ -86,7 +94,7 @@ public class DiceGame {
             Thread.sleep(1000);
             clrscr();
             System.out.println("===========================================");
-            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("=Pay $500 to get ad-free membership TODAY!=");
             System.out.println("===========================================");
             System.out.println("===========================================");
             System.out.println("===========================================");
@@ -95,7 +103,7 @@ public class DiceGame {
             clrscr();
             System.out.println("===========================================");
             System.out.println("===========================================");
-            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("=Pay $500 to get ad-free membership TODAY!=");
             System.out.println("===========================================");
             System.out.println("===========================================");
             System.out.println("                                        [3]");
@@ -104,7 +112,7 @@ public class DiceGame {
             System.out.println("===========================================");
             System.out.println("===========================================");
             System.out.println("===========================================");
-            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("=Pay $500 to get ad-free membership TODAY!=");
             System.out.println("===========================================");
             System.out.println("                                        [2]");
             Thread.sleep(1000);
@@ -113,14 +121,14 @@ public class DiceGame {
             System.out.println("===========================================");
             System.out.println("===========================================");
             System.out.println("===========================================");
-            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("=Pay $500 to get ad-free membership TODAY!=");
             System.out.println("                                        [1]");
             Thread.sleep(1000);
             clrscr();
             System.out.println("===========================================");
-            System.out.println("=================Dice Game=================");
+            System.out.println("=Pay $500 to get ad-free membership TODAY!=");
             System.out.println("===========================================");
-            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("=================Dice Game=================");
             System.out.println("===========================================");
             System.out.println("                                        [0]");
             Thread.sleep(1000);
@@ -129,40 +137,22 @@ public class DiceGame {
 
     }
 
-    void signUp(Character YorN) throws InterruptedException {
+    // void signUp(Integer oneOrTwo) throws InterruptedException {
 
-        switch (YorN) {
+    // if (Character.toLowerCase(YorN) == 'y') {
+    // balance = balance - 500;
+    // memberShip = true;
+    // System.out.println("You've sucessfully signed up for ad-free member.
+    // Hooray!!");
+    // Thread.sleep(2000);
+    // clrscr();
 
-            case 'y':
-                balance = balance - 500;
-                memberShip = true;
-                System.out.println("You've sucessfully signed up for ad-free member. Hooray!!");
-                Thread.sleep(2000);
-                clrscr();
-                break;
-
-            case 'n':
-
-                System.out.println("Sad to hear that");
-                Thread.sleep(2000);
-                clrscr();
-                break;
-        }
-
-        // if (Character.toLowerCase(YorN) == 'y') {
-        // balance = balance - 500;
-        // memberShip = true;
-        // System.out.println("You've sucessfully signed up for ad-free member.
-        // Hooray!!");
-        // Thread.sleep(2000);
-        // clrscr();
-
-        // } else if (Character.toLowerCase(YorN) == 'n') {
-        // System.out.println("Sad to hear that");
-        // Thread.sleep(2000);
-        // clrscr();
-        // }
-    }
+    // } else if (Character.toLowerCase(YorN) == 'n') {
+    // System.out.println("Sad to hear that");
+    // Thread.sleep(2000);
+    // clrscr();
+    // }
+    // }
 
     void clrscr() {
         // Clears Screen in java
