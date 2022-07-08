@@ -1,5 +1,8 @@
+import java.io.IOException;
+
 public class DiceGame {
-    private int balance = 20;
+    private int balance = 1000;
+    private boolean memberShip = false;
 
     @Override
     public String toString() {
@@ -8,6 +11,10 @@ public class DiceGame {
 
     public int getBalance() {
         return balance;
+    }
+
+    public boolean getMemberShip() {
+        return memberShip;
     }
 
     void Win(int bet) {
@@ -64,6 +71,108 @@ public class DiceGame {
         } else {
             Lose(bet);
             System.out.println("You Lost!");
+        }
+    }
+
+    void Ads() throws InterruptedException {
+        if (memberShip == false) {
+            clrscr();
+            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("                                        [5]");
+            Thread.sleep(1000);
+            clrscr();
+            System.out.println("===========================================");
+            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("                                        [4]");
+            Thread.sleep(1000);
+            clrscr();
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("                                        [3]");
+            Thread.sleep(1000);
+            clrscr();
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("===========================================");
+            System.out.println("                                        [2]");
+            Thread.sleep(1000);
+            clrscr();
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("===========================================");
+            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("                                        [1]");
+            Thread.sleep(1000);
+            clrscr();
+            System.out.println("===========================================");
+            System.out.println("=================Dice Game=================");
+            System.out.println("===========================================");
+            System.out.println("=Pay $500 to get ad-free membershop TODAY!=");
+            System.out.println("===========================================");
+            System.out.println("                                        [0]");
+            Thread.sleep(1000);
+            clrscr();
+        }
+
+    }
+
+    void signUp(Character YorN) throws InterruptedException {
+
+        switch (YorN) {
+
+            case 'y':
+                balance = balance - 500;
+                memberShip = true;
+                System.out.println("You've sucessfully signed up for ad-free member. Hooray!!");
+                Thread.sleep(2000);
+                clrscr();
+                break;
+
+            case 'n':
+
+                System.out.println("Sad to hear that");
+                Thread.sleep(2000);
+                clrscr();
+                break;
+        }
+
+        // if (Character.toLowerCase(YorN) == 'y') {
+        // balance = balance - 500;
+        // memberShip = true;
+        // System.out.println("You've sucessfully signed up for ad-free member.
+        // Hooray!!");
+        // Thread.sleep(2000);
+        // clrscr();
+
+        // } else if (Character.toLowerCase(YorN) == 'n') {
+        // System.out.println("Sad to hear that");
+        // Thread.sleep(2000);
+        // clrscr();
+        // }
+    }
+
+    void clrscr() {
+        // Clears Screen in java
+        try {
+            if (System.getProperty("os.name").contains("Windows"))
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            else
+                Runtime.getRuntime().exec("clear");
+            System.out.print("\033\143");
+        } catch (IOException | InterruptedException ex) {
         }
     }
 }
