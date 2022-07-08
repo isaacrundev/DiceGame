@@ -50,11 +50,11 @@ public class App {
                 int diceOfBlue = rand.nextInt(6) + 1;
                 diceGame.Ads();
                 Thread.sleep(1800);
+                diceGame.clrscr();
                 System.out.println("############### ################");
                 System.out.println("#     Red     # #     Blue     #");
-                System.out.println("#             # #              #");
+                System.out.println("############### ################");
                 Thread.sleep(1800);
-                System.out.println("#             # #              #");
                 System.out.println("#      " + diceOfRed + "      #" + " " + "#       " + diceOfBlue + "      #");
                 System.out.println("############### ################");
                 Thread.sleep(1800);
